@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="progress">
+            <div class="progress-bar w-50" role="progressbar"></div>
+        </div>
+
+        <hr>
+
+        <div class="progress">
+            <div class="progress-bar" id="progress-bar" role="progressbar" style="width: 0%"></div>
+        </div>
+
+        <hr>
+
+        <div class="progress">
+            <div class="progress-bar bg-danger" id="progress-bar" role="progressbar" style="width: 35%"></div>
+        </div>
+
+        <hr>
+
+        <div class="progress" style="height: 100px">
+            <div class="progress-bar bg-success" id="progress-bar" role="progressbar" style="width: 35%">35%</div>
+        </div>
+
+        <hr>
+
+        <div class="progress">
+            <div class="progress-bar progress-bar-striped bg-success" id="progress-bar" role="progressbar" style="width: 35%">35%</div>
+        </div>
+
+        <hr>
+
+        <div class="progress">
+            <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" id="progress-bar" role="progressbar" style="width: 35%">35%</div>
+        </div>
+    </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            window.progressInterval = setInterval(() => {
+                let progress = $('#progress-bar').css('width').replace('%', '')
+                progress = parseInt(progress) + 5
+
+                if (progress >= 100) {
+                    clearInterval(progressInterval)
+                }
+
+                $('#progress-bar').css('width', `${progress}%`)
+            }, 500)
+        })
+    </script>
+</body>
+</html>

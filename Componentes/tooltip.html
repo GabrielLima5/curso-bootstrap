@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tooltip</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+</head>
+<body>
+
+    <div class="container">
+        <hr>
+        <hr>
+        <hr>
+        
+        <button class="btn btn-secondary" data-toggle="tooltip" data-placement="bottom" title="Tooltip abaixo">Botão</button>
+        <button class="btn btn-secondary" data-toggle="tooltip" data-placement="left" title="Tooltip na esquerda">Botão</button>
+        <button class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Tooltip acima">Botão</button>
+        <button class="btn btn-secondary" data-toggle="tooltip" data-placement="right" title="Tooltip na direita">Botão</button>
+    </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+</body>
+</html>

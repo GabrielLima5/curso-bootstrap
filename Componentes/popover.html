@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popover</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <button type="button" data-toggle="popover" data-content="Conteúdo do popover" class="btn btn-primary btn-lg">Mostrar popover</button>
+        
+        <hr>
+
+        <button type="button" data-toggle="popover" title="Titulo do popover" data-content="Conteúdo do popover" class="btn btn-primary btn-lg">Mostrar popover</button>
+        <button type="button" data-toggle="popover" title="Titulo do popover" data-content="Conteúdo do popover" data-placement="left" class="btn btn-primary btn-lg">Mostrar popover</button>
+
+        <button type="button" data-toggle="popover" title="Titulo do popover" data-trigger="hover" data-content="Conteúdo do popover" data-placement="bottom" class="btn btn-primary btn-lg">Mostrar popover</button>
+    
+        <button type="button" class="btn btn-danger" id="btn-click">Abrir Popover</button>
+    </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('[data-toggle="popover"]').popover()
+            $('#btn-click').on('click', e => {
+                $('[data-toggle="popover"]').popover('toggle')
+            })
+        })
+    </script>
+</body>
+</html>

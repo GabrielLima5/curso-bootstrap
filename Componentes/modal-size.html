@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal Size</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+</head>
+<body class="d-flex justify-content-center align-items-center" style="height: 100vh">
+
+    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modal-1">Abrir modal</button>
+
+    <div class="modal" id="modal-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-title">Teste do Modal</div>
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span>&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, laboriosam iusto ratione praesentium placeat eos perferendis reprehenderit nulla magnam consectetur maiores in officiis maxime ipsam hic soluta tempore, quia qui.</p>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" data-dismiss="modal" class="btn btn-secondary">Cancelar</button>
+                    <button type="button" id="btn-continue" class="btn btn-primary">Continuar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $('#btn-continue').on('click', e => {
+                $('#modal-1').modal('hide')
+            })
+        })
+    </script>
+</body>
+</html>

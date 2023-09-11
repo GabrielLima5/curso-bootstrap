@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Badges</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+</head>
+<body>
+    
+    <h1>Hcode Treinamentos <span class="badge badge-primary">Novo!</span></h1>
+    <h2>Hcode Treinamentos <span class="badge badge-primary">Novo!</span></h2>
+    <h3>Hcode Treinamentos <span class="badge badge-primary">Novo!</span></h3>
+    <h4>Hcode Treinamentos <span class="badge badge-primary">Novo!</span></h4>
+    <h5>Hcode Treinamentos <span class="badge badge-primary">Novo!</span></h5>
+    <h6>Hcode Treinamentos <span class="badge badge-primary">Novo!</span></h6>
+
+    <hr>
+    
+    <button type="button" id="btn-click" class="btn btn-primary">Clique Aqui <span class="badge badge-light">0</span></button>
+
+    <hr>
+
+    <button type="button" class="btn btn-primary">
+        Caixa de Entrada <span class="badge badge-light">0</span>
+        <span class="sr-only">Há 5 mensagens não lidas</span>
+    </button>
+
+    <hr>
+
+    <span class="badge badge-primary">1</span>
+    <span class="badge badge-secondary">2</span>
+    <span class="badge badge-danger">3</span>
+    <span class="badge badge-warning">4</span>
+    <span class="badge badge-success">5</span>
+    <span class="badge badge-info">6</span>
+    <span class="badge badge-dark">7</span>
+    <span class="badge badge-light">8</span>
+
+    <span class="badge badge-primary badge-pill">1</span>
+    <a href="" class="badge badge-success">Clique Aqui!</a>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        (function($){
+            let n = 0
+
+            $('#btn-click').on('click', e => {
+                n++
+                $('#btn-click').find($('.badge')).text(n)
+            })
+        })(jQuery)
+    </script>
+</body>
+</html>

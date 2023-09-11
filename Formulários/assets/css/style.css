@@ -1,0 +1,30 @@
+.header{
+    background-color: #f37520;
+    height: 70px;
+}
+
+ul, p{
+    font-size: 1.4rem;
+}
+
+h1{
+    font-size: 3rem;
+}
+
+section{
+    height: 700px;
+}
+
+.website{
+    font-size: 1.2rem;
+}
+
+.list-title{
+    font-size: 2rem;
+}
+
+@media only screen and (max-width: 576px){
+    .header{
+        height: 100px;
+    }
+}

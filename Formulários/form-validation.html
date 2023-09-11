@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Formulário</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <form id="form" novalidate class="needs-validation">
+            <div class="row">
+                <div class="col-6 form-group">
+                    <label for="firstname">Primeiro Nome</label>
+                    <input type="text" required id="firstname" class="form-control">
+                </div>
+                <div class="col-6 form-group">
+                    <label for="lastname">Último Nome</label>
+                    <input type="text" id="lastname" class="form-control">
+                </div>
+            </div>
+    
+            <div class="row">
+                <div class="col-12 col-md-3 form-group">
+                    <label for="zipcode">CEP</label>
+                    <input type="text" id="zipcode" class="form-control">
+                </div>
+            </div>
+    
+            <div class="row">
+                <div class="col-12 col-md-8 form-group">
+                    <label for="address">Endereço</label>
+                    <input type="text" id="address" class="form-control" placeholder="Rua, Av...">
+                </div>
+                <div class="col-12 col-md-4 form-group">
+                    <label for="number">Número</label>
+                    <input type="number" id="number" class="form-control">
+                </div>
+            </div>
+    
+            <div class="row">
+                <div class="col-12 col-md-6 form-group">
+                    <label for="complement">Complemento</label>
+                    <input type="text" id="complement" class="form-control">
+                </div>
+    
+                <div class="col-12 col-md-6 form-group">
+                    <label for="district">Bairro</label>
+                    <input type="text" id="district" class="form-control">
+                </div>
+            </div>
+    
+            <div class="row">
+                <div class="col-12 col-md-4 form-group">
+                    <label for="city">Cidade</label>
+                    <input type="text" id="city" class="form-control">
+                </div>
+    
+                <div class="col-6 col-md-4 form-group">
+                    <label for="state">Estado</label>
+                    <input type="text" id="state" class="form-control">
+                </div>
+    
+                <div class="col-6 col-md-4 form-group">
+                    <label for="country">País</label>
+                    <input type="text" id="country" class="form-control">
+                </div>
+            </div>
+    
+            <div class="row">
+                <button type="submit" class="btn btn-primary btn-block">Salvar</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script>
+        
+        // $(document).ready(function(){
+        //     $('#form').on('submit', e => {
+        //         const form = e.target
+        //         e.preventDefault()
+
+        //         if(form.checkValidity() === false){
+        //             e.stopPropagation()
+        //         }
+
+        //         $(form).addClass('was-validated')
+        //     })
+        // })
+
+        window.addEventListener('load', e => {
+            const formEl =  document.querySelector('#form')
+            formEl.addEventListener('submit', ev => {
+                ev.preventDefault()
+                const form = ev.target
+
+                if (form.checkValidity() === false){
+                    ev.stopPropagation()
+                }
+
+                formEl.classList.add('was-validated')
+            })
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+img{
+    height: 45px;
+}
+
+header .contact-photo,
+header .contact-info{
+    background-color: #eeeeee;
+}
+
+header .contact-name{
+    font-size: 1.2rem;
+}
+
+header .last-seen{
+    font-size: .8rem;
+}
+
+main .empty{
+    background-color: #f8f8f8;
+    height: 50px;
+}
+
+main li.contact-item{
+    background-color: #ffffff;
+}
+
+main .contact-item .active{
+    font-weight: bold;
+}
+
+main .contact-item .contact-name{
+    color: #4d4d4d;
+    font-size: 1.2rem;
+}
+
+main .contact-item .contact-message:not(.active){
+    font-size: .9rem;
+    color: #9b9b9b;
+}
+
+main .contact-item .hours{
+    font-size: .8rem;
+    color: #999999;
+}
+
+main .contact-item .badge{
+    border-radius: 50%;
+    width: 20px;
+}
+
+.bg{
+    background-color: #e5ddd5; 
+    height: 85vh; 
+}
+
+.footer{
+    background-color: #eeeeee;
+    height: 8vh;
+}
